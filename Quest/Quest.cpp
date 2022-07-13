@@ -1,5 +1,3 @@
-//Pull requests
-
 #include <iostream>
 using namespace std;
 
@@ -38,19 +36,19 @@ protected:
 	int year_of_study;
 public:
 	Student(string name, int age, string gender, int weight, int year_of_study) :
-		Person (name, age, gender, weight)
+		Person(name, age, gender, weight)
 	{
 		this->year_of_study = year_of_study;
-		
-	
+
+
 	}
 
 	void printYear()
 	{
 		cout << "Year of study: " << year_of_study << endl << endl;
 	}
-	
-	
+
+
 
 };
 
@@ -96,7 +94,7 @@ public:
 		getColor();
 	}
 
-	
+
 
 
 };
@@ -104,7 +102,7 @@ public:
 class GrannySmith : public Apple
 {
 public:
-	
+
 	GrannySmith() : Apple("green")
 	{
 		setName("Granny Smith " + Apple::getName());
@@ -116,7 +114,7 @@ public:
 class Banana : public Fruit
 {
 public:
-	
+
 	Banana()
 	{
 		Color = "yellow";
@@ -136,9 +134,9 @@ int main()
 	Person* Stud[] = { &s00,&s01,&s02 };
 	for (int i = 0; i < 3; i++)
 	{
-		cout << i+1 << ". ";
+		cout << i + 1 << ". ";
 		Stud[i]->printf();
-		((Student *)Stud[i])->printYear();
+		((Student*)Stud[i])->printYear();
 	}
 
 
